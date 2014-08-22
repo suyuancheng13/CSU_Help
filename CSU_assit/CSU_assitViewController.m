@@ -98,63 +98,47 @@ dispatch_queue_t mainviewQueue;
 
     CGRect frame1 ;
     frame1.origin.x = 0;
-    frame1.origin.y = 45;
+    frame1.origin.y = 0;
     frame1.size.width =0.9* [UIScreen mainScreen].bounds.size.width;
     frame1.size.height = [UIScreen mainScreen].bounds.size.height;
     _tableView = [[UITableView alloc] initWithFrame:frame1];
     UIImageView *imageview = [[UIImageView alloc]initWithImage:[UIImage imageNamed:leftSide]];
     [_tableView setBackgroundView:imageview];
-   //[imageview a]
     [_tableView setHidden:NO];
     [_tableView setDelegate:self];
     [_tableView setDataSource:self];
-    //[tableView reloadData];
     [_tableView setScrollEnabled:NO];
     
     CGRect frame2;
     frame2.origin.x = 0;//frame1.size.width;
-    frame2.origin.y = 45;
+    frame2.origin.y = 0;
     frame2.size.width = [UIScreen mainScreen].bounds.size.width;
     frame2.size.height = [UIScreen mainScreen].bounds.size.height;
     mainView = [[UIView alloc]initWithFrame:frame2];
 
     [mainView setHidden:NO];
     [mainView setOpaque:YES];
-    //[mainView  setBackgroundColor:[UIColor whiteColor]];
     [mainView addGestureRecognizer:[[[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(pan:)] autorelease]];
     
     //add the navigaiton bar
     UINavigationBar *navi = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, frame2.size.width, 45)];
-   
-    
-    UINavigationItem *item = [[UINavigationItem alloc] init];
-    
+    UINavigationItem *item = [[UINavigationItem alloc] init];    
     UIBarButtonItem *item_button = [[UIBarButtonItem alloc] initWithTitle:@"More" style:UIBarButtonItemStyleBordered target:self action:@selector(left)];
     [item setLeftBarButtonItem:item_button];
     [[item leftBarButtonItem]setStyle:UIBarButtonItemStyleBordered];
-   // [item ]
-   [navi setItems:[NSArray arrayWithObjects:item, nil]];
+    [navi setItems:[NSArray arrayWithObjects:item, nil]];
     [item setTitle:@"中南生活助手"];
-    //[navi setAlpha:0.5];
-    //[navi setBackgroundColor:[UIColor redColor]];
-   // [navi setBarStyle:UIBarStyleBlackOpaque];
-     UILabel *label  = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, frame2.size.width, 45)];
-   // [label addSubview:item_button];
-    UIButton *more = [[UIButton alloc]initWithFrame:CGRectMake(100,100, 60, 45)];
-    [more setTitle:@"more" forState:UIControlStateNormal];
-    [more setHidden:NO];
-    //[more setBackgroundColor:[UIColor redColor]];
-    [label addSubview:more];
-    [label setBackgroundColor:[UIColor grayColor]];
-   // [navi addSubview:more];
-    UIImageView *img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:mainViewBack]];
+    
+      UIImageView *img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:mainViewBack]];
     [img setFrame:[UIScreen mainScreen].bounds];
     [mainView addSubview:img];
     [img release];
     [self mainaddView];
     [mainView addSubview:navi];
-    [[self.navigationController navigationItem]setLeftBarButtonItem:item_button];
-    [[self.navigationController navigationBar]setHidden:NO];
+    
+//    [[self.navigationController navigationItem]setLeftBarButtonItem:item_button];
+//    [[self.navigationController navigationBar]setHidden:NO];
+    
     [scrollView addSubview:_tableView];
     [scrollView addSubview:mainView];
     [self setView:scrollView];

@@ -37,9 +37,6 @@
 		4A8138AF1796C15B00A3DDEA /* shopping.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A8138AE1796C15B00A3DDEA /* shopping.txt */; };
 		4A8138B11796C18700A3DDEA /* tour.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A8138B01796C18700A3DDEA /* tour.txt */; };
 		4A8138B31796C1C400A3DDEA /* entertainment.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A8138B21796C1C400A3DDEA /* entertainment.txt */; };
-		4A8138BB1796C6EB00A3DDEA /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A8138B41796C6EB00A3DDEA /* 1.png */; };
-		4A8138C01796C6EB00A3DDEA /* hfcs_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A8138B91796C6EB00A3DDEA /* hfcs_back.png */; };
-		4A8138C11796C6EB00A3DDEA /* wzcs_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A8138BA1796C6EB00A3DDEA /* wzcs_back.png */; };
 		4A8138C31796D0BF00A3DDEA /* bite1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A8138C21796D0BF00A3DDEA /* bite1.txt */; };
 		4A823FB617C264DF00CC0BDB /* campus1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A823FB217C264DF00CC0BDB /* campus1.png */; };
 		4A823FB717C264DF00CC0BDB /* campus2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A823FB317C264DF00CC0BDB /* campus2.png */; };
@@ -157,9 +154,6 @@
 		4A8138AE1796C15B00A3DDEA /* shopping.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shopping.txt; sourceTree = "<group>"; };
 		4A8138B01796C18700A3DDEA /* tour.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tour.txt; sourceTree = "<group>"; };
 		4A8138B21796C1C400A3DDEA /* entertainment.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = entertainment.txt; sourceTree = "<group>"; };
-		4A8138B41796C6EB00A3DDEA /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = "../../../界面_27911/界面/1/1.png"; sourceTree = "<group>"; };
-		4A8138B91796C6EB00A3DDEA /* hfcs_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hfcs_back.png; path = "../../../界面_27911/界面/1/hfcs_back.png"; sourceTree = "<group>"; };
-		4A8138BA1796C6EB00A3DDEA /* wzcs_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wzcs_back.png; path = "../../../界面_27911/界面/1/wzcs_back.png"; sourceTree = "<group>"; };
 		4A8138C21796D0BF00A3DDEA /* bite1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bite1.txt; sourceTree = "<group>"; };
 		4A823FB217C264DF00CC0BDB /* campus1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campus1.png; sourceTree = "<group>"; };
 		4A823FB317C264DF00CC0BDB /* campus2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campus2.png; sourceTree = "<group>"; };
@@ -423,9 +417,6 @@
 				4ACB1E9B17BA1C0C003F545D /* 入学指导--适应生活.jpg */,
 				4ACB1E9C17BA1C0C003F545D /* 入学指导--适应学习.jpg */,
 				4ACB1E9217BA18E5003F545D /* 登录界面--提交按钮图.jpg */,
-				4A8138B41796C6EB00A3DDEA /* 1.png */,
-				4A8138B91796C6EB00A3DDEA /* hfcs_back.png */,
-				4A8138BA1796C6EB00A3DDEA /* wzcs_back.png */,
 				4A85F50D1796881700EE0381 /* step1.jpg */,
 				4A85F50E1796881700EE0381 /* step2.jpg */,
 				4A85F50F1796881700EE0381 /* step3.jpg */,
@@ -544,9 +535,6 @@
 				4A8138AF1796C15B00A3DDEA /* shopping.txt in Resources */,
 				4A8138B11796C18700A3DDEA /* tour.txt in Resources */,
 				4A8138B31796C1C400A3DDEA /* entertainment.txt in Resources */,
-				4A8138BB1796C6EB00A3DDEA /* 1.png in Resources */,
-				4A8138C01796C6EB00A3DDEA /* hfcs_back.png in Resources */,
-				4A8138C11796C6EB00A3DDEA /* wzcs_back.png in Resources */,
 				4A8138C31796D0BF00A3DDEA /* bite1.txt in Resources */,
 				4AA865A1179817EF00B7B17C /* procolloge.xib in Resources */,
 				4AA865A417981AB800B7B17C /* enter.txt in Resources */,
