@@ -10,11 +10,12 @@
 #import <Mapkit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "mapLocation.h"
-@interface map : UIViewController<MKMapViewDelegate,CLLocationManagerDelegate,MKReverseGeocoderDelegate> {
-    MKMapView           *_map;
+@interface map : UIViewController<MKMapViewDelegate,CLLocationManagerDelegate> {
+   // MKMapView           *_map;
     UIActivityIndicatorView *activityView;
     CLLocationManager   *locationManager;
     
 }
+@property (retain, nonatomic) IBOutlet MKMapView *_map;
 
 @end

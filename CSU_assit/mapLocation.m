@@ -63,4 +63,8 @@
     return re;
     
 }
+- (CLLocationCoordinate2D)coordinate
+{
+    return _location;
+}
 @end

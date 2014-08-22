@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import  <Mapkit/MapKit.h>
+#import<MapKit/MapKit.h>
 
 @interface mapLocation : NSObject<MKAnnotation> {
     NSString   *_street;
