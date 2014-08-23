@@ -78,7 +78,7 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 200, 200);
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 500, 500);
     MKCoordinateRegion adjustRegion = [_map regionThatFits:viewRegion];
     [_map setRegion:adjustRegion animated:YES];
     [locationManager setDelegate: nil ];
@@ -131,6 +131,8 @@
     annotationView.animatesDrop = YES;
     annotationView.highlighted = YES;
     annotationView.draggable = YES;
+    annotationView.enabled = YES;
+    annotationView.selected = YES;
     return annotationView;
 }
 - (void)mapViewDidFailLoadingMap:(MKMapView *)theMapView withError:(NSError *)error {
