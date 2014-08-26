@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CSU_assit/map.m"
-         timestampString = "430403173.306344"
+         timestampString = "430714841.322191"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "42"
-         endingLineNumber = "42"
+         startingLineNumber = "45"
+         endingLineNumber = "45"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,12 +21,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CSU_assit/map.m"
-         timestampString = "430403173.306344"
+         timestampString = "430714841.322191"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "81"
-         endingLineNumber = "81"
+         startingLineNumber = "89"
+         endingLineNumber = "89"
          landmarkName = "-locationManager:didUpdateToLocation:fromLocation:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "CSU_assit/map.m"
+         timestampString = "430714813.444214"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "157"
+         endingLineNumber = "157"
+         landmarkName = "-changeMapType:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

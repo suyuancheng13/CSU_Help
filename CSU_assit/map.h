@@ -14,8 +14,10 @@
    // MKMapView           *_map;
     UIActivityIndicatorView *activityView;
     CLLocationManager   *locationManager;
+    IBOutlet UIButton *mapTypeBtn;
     
 }
 @property (retain, nonatomic) IBOutlet MKMapView *_map;
+- (IBAction)changeMapType:(id)sender;
 
 @end

@@ -10,6 +10,8 @@
 
 
 @implementation map
+
+
 @synthesize _map;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -24,6 +26,7 @@
 - (void)dealloc
 {
     [_map release];
+    [mapTypeBtn release];
     [super dealloc];
 }
 
@@ -45,9 +48,12 @@
     _map.mapType =MKMapTypeStandard;
     _map.delegate = self;
     
+    [mapTypeBtn setTitle:@"Satellite" forState:UIControlStateNormal];
+    
     locationManager = [[CLLocationManager alloc]init];
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest; 
+    locationManager.distanceFilter = 1000.f;
     [locationManager startUpdatingLocation];
     activityView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [activityView setCenter:[self.view center]];
@@ -62,6 +68,8 @@
     [activityView release];
     [locationManager release];
     [self set_map:nil];
+    [mapTypeBtn release];
+    mapTypeBtn = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -145,5 +153,18 @@
     [alert show];
     [alert release];
 }
-
+- (IBAction)changeMapType:(id)sender {
+    if(MKMapTypeStandard == _map.mapType)
+    {
+        _map.mapType = MKMapTypeSatellite;
+        [mapTypeBtn setTitle:@"Standard" forState:UIControlStateNormal];
+        
+    }
+   else if(MKMapTypeSatellite == _map.mapType)
+    {
+        _map.mapType = MKMapTypeStandard;
+        [mapTypeBtn setTitle:@"Satellite" forState:UIControlStateNormal];
+    }
+    [locationManager startUpdatingLocation];
+}
 @end
