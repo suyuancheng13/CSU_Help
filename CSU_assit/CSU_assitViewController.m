@@ -99,7 +99,7 @@ dispatch_queue_t mainviewQueue;
     CGRect frame1 ;
     frame1.origin.x = 0;
     frame1.origin.y = 0;
-    frame1.size.width =0.9* [UIScreen mainScreen].bounds.size.width;
+    frame1.size.width =1* [UIScreen mainScreen].bounds.size.width;
     frame1.size.height = [UIScreen mainScreen].bounds.size.height;
     _tableView = [[UITableView alloc] initWithFrame:frame1];
     UIImageView *imageview = [[UIImageView alloc]initWithImage:[UIImage imageNamed:leftSide]];
@@ -130,8 +130,10 @@ dispatch_queue_t mainviewQueue;
     [item setTitle:@"中南生活助手"];
     
       UIImageView *img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:mainViewBack]];
-    [img setFrame:[UIScreen mainScreen].bounds];
-    [mainView addSubview:img];
+    //[img setFrame:mainView.bounds];
+    
+   // [mainView addSubview:img];
+    [mainView setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
     [img release];
     [self mainaddView];
     [mainView addSubview:navi];
@@ -356,11 +358,25 @@ dispatch_queue_t mainviewQueue;
 {
     CGRect frame = mainView.frame;
     if(frame.origin.x == 0)
-    
-        frame.origin.x = [[UIScreen mainScreen]bounds].size.width*0.9;
+    {
+        frame.origin.x = [[UIScreen mainScreen]bounds].size.width*0.6;
+        frame.origin.y = [[UIScreen mainScreen]bounds].size.height*0.1;
+        frame.size.height =[[UIScreen mainScreen]bounds].size.height*0.8;
+         [mainView setFrame:frame];
+        [_tableView setAlpha:1];
+
+    }
     else
+    {
         frame.origin.x = 0;
-    [mainView setFrame:frame];
+         [mainView setFrame:frame];
+        [mainView setBounds:CGRectMake(0, 0, frame.size.width, [[UIScreen mainScreen]bounds].size.height)];
+        [_tableView setAlpha:0];
+    }
+   // frame.origin.y = [[UIScreen mainScreen]bounds].size.height*0.1;
+   // frame.size.height = [[UIScreen mainScreen]bounds].size.height*0.5;
+   
+    
     return ;
     
 }
@@ -463,24 +479,32 @@ dispatch_queue_t mainviewQueue;
 //show or hide the side menu 
 - (void)pan:(UIPanGestureRecognizer *)sender
 {  
-    float cap = [[UIScreen mainScreen]bounds].size.width*0.9;
+    float cap = [[UIScreen mainScreen]bounds].size.width*0.6;
     float v_X = [sender velocityInView:mainView].x;//point /second
+    float alpha =0;
     if(v_X>0)
     {
-        _left = YES;
+        _left = YES;//from left to right
+        alpha =0;
     }
     else
     {
         _right = YES;
+        alpha = 0;
     }
     
     CGPoint point = [sender translationInView:mainView];
     [sender setTranslation:CGPointZero inView:mainView];
     
     float contentX = mainView.frame.origin.x;
+    float heiht = mainView.frame.size.height;
+    
+    float scale = [[UIScreen mainScreen]bounds].size.height/[[UIScreen mainScreen]bounds].size.width;
     if(_left)
     {
         contentX +=point.x;
+        heiht -= point.x*scale/3;
+        alpha += contentX/cap;
         if(contentX > cap)
         {
             contentX = cap;
@@ -489,10 +513,17 @@ dispatch_queue_t mainviewQueue;
         {
             contentX = 0;
         }
+        if(heiht <= [[UIScreen mainScreen]bounds].size.height*0.8)
+        {
+            heiht = [[UIScreen mainScreen]bounds].size.height*0.8;
+        }
+       
     }
     else if(_right)
     {
         contentX += point.x;
+        heiht -= point.x*scale/3;
+        alpha -= 0.5;
         if(contentX >cap)
         {
             contentX = cap;
@@ -501,11 +532,18 @@ dispatch_queue_t mainviewQueue;
         {
             contentX = 0;
         }
+        if(heiht >= [[UIScreen mainScreen]bounds].size.height)
+        {
+            heiht = [[UIScreen mainScreen]bounds].size.height;
+        }
+
     }
       
       CGRect frame = mainView.frame;
       frame.origin.x = contentX;
       mainView.frame= frame;
+    [mainView setBounds:CGRectMake(0, 0, frame.size.width, heiht)];
+    [_tableView setAlpha:alpha];
       
       if(sender.state == UIGestureRecognizerStateCancelled || sender.state == UIGestureRecognizerStateEnded)
       {
@@ -518,11 +556,15 @@ dispatch_queue_t mainviewQueue;
               {
                   diff = cap - contentX;
                   finishedX = cap;
+                  alpha = 1;
+                  heiht = [[UIScreen mainScreen]bounds].size.height*0.8;
              }
               else
               {
                   diff = contentX;
                   finishedX = 0;
+                  alpha = 0;
+                  heiht = [[UIScreen mainScreen]bounds].size.height;
                   
               }
           }
@@ -532,18 +574,24 @@ dispatch_queue_t mainviewQueue;
               {
                   diff = contentX;
                   finishedX = 0;
+                  alpha = 0;
+                  heiht = [[UIScreen mainScreen]bounds].size.height;
                 
               }
               else
               {
                   diff = contentX + cap;
                   finishedX = 0;
+                  alpha= 0;
+                  heiht = [[UIScreen mainScreen]bounds].size.height;
                 
               }
           }
           CGRect frame = mainView.frame;
           frame.origin.x = finishedX;
           mainView.frame= frame;
+          [mainView setBounds:CGRectMake(0, 0, frame.size.width, heiht)];
+          [_tableView setAlpha:alpha];
       }
       
 
