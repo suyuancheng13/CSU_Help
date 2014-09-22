@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CSU_assit/CSU_assitViewController.m"
-         timestampString = "431060984.291609"
+         timestampString = "433083002.511752"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "526"
-         endingLineNumber = "526"
+         startingLineNumber = "527"
+         endingLineNumber = "527"
          landmarkName = "-pan:"
          landmarkType = "5">
       </FileBreakpoint>

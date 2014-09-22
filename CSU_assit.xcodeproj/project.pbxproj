@@ -109,6 +109,7 @@
 		4ACB1EA117BA1C0C003F545D /* 入学指导--适应学习.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4ACB1E9C17BA1C0C003F545D /* 入学指导--适应学习.jpg */; };
 		4ADD8D9F17AE840F00FE0FDD /* room.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD8D9D17AE840F00FE0FDD /* room.m */; };
 		4ADD8DA017AE840F00FE0FDD /* room.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ADD8D9E17AE840F00FE0FDD /* room.xib */; };
+		E581069A19D051C8000B3A86 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E581069C19D051C8000B3A86 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -236,6 +237,8 @@
 		4ADD8D9C17AE840E00FE0FDD /* room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = room.h; sourceTree = "<group>"; };
 		4ADD8D9D17AE840F00FE0FDD /* room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = room.m; sourceTree = "<group>"; };
 		4ADD8D9E17AE840F00FE0FDD /* room.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = room.xib; sourceTree = "<group>"; };
+		E581069B19D051C8000B3A86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E581069D19D05255000B3A86 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +315,7 @@
 				4A4BCAF017924A90004296FE /* InfoPlist.strings */,
 				4A4BCAF317924A90004296FE /* CSU_assit-Prefix.pch */,
 				4A4BCAF417924A90004296FE /* main.m */,
+				E581069C19D051C8000B3A86 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -481,6 +485,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = 4A4BCAD817924A8E004296FE;
 			productRefGroup = 4A4BCAE417924A90004296FE /* Products */;
@@ -574,6 +579,7 @@
 				4A823FC317C2653E00CC0BDB /* Guid.jpg in Resources */,
 				4A823FC617C265FF00CC0BDB /* PreCollege.jpg in Resources */,
 				4A823FC817C2670400CC0BDB /* New.jpg in Resources */,
+				E581069A19D051C8000B3A86 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +637,15 @@
 				4A4BCB0017924A91004296FE /* en */,
 			);
 			name = CSU_assitViewController.xib;
+			sourceTree = "<group>";
+		};
+		E581069C19D051C8000B3A86 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E581069B19D051C8000B3A86 /* en */,
+				E581069D19D05255000B3A86 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -122,8 +122,9 @@ dispatch_queue_t mainviewQueue;
     
     //add the navigaiton bar
     UINavigationBar *navi = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, frame2.size.width, 45)];
-    UINavigationItem *item = [[UINavigationItem alloc] init];    
-    UIBarButtonItem *item_button = [[UIBarButtonItem alloc] initWithTitle:@"More" style:UIBarButtonItemStyleBordered target:self action:@selector(left)];
+    UINavigationItem *item = [[UINavigationItem alloc] init]; 
+    NSString *more = NSLocalizedString(@"more", @"");
+    UIBarButtonItem *item_button = [[UIBarButtonItem alloc] initWithTitle:more style:UIBarButtonItemStyleBordered target:self action:@selector(left)];
     [item setLeftBarButtonItem:item_button];
     [[item leftBarButtonItem]setStyle:UIBarButtonItemStyleBordered];
     [navi setItems:[NSArray arrayWithObjects:item, nil]];
